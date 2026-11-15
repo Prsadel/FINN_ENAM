@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+.venv/
+venv/
+
+# next.js
+.next/
+out/
+build/
+
+# env & secrets
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.pyc
+
+# vercel & misc
+.vercel/
+.DS_Store
+*.log
