@@ -183,3 +183,24 @@ clearly labeled data gap.
 3. Consented LinkedIn OAuth network ingestion
 4. WhatsApp/Telegram push delivery of the digest
 5. Collaborative team graphs with permissioned cross-querying
+
+---
+
+## 9. Repository Map & Stack
+
+| Layer | Choice |
+|---|---|
+| Frontend | Next.js 14 (App Router) + Tailwind CSS — mobile-first (`max-w-md`), dark Bloomberg-lite aesthetic |
+| Backend | Next.js API routes (Vercel serverless, TS) |
+| Data | Build-time curated JSON fixtures + runtime Yahoo Finance generalizer |
+| Intelligence | TS engines: classifier, anomaly detector, graph (BFS/expertise/prep-parser), deterministic metrics & audits |
+| LLM | Pluggable cache-first hook (Tier-1 extraction / Tier-2 synthesis routing); demo runs keyless |
+
+```
+src/app/            # Push feed · company deep-dive · research · network explorer · API routes
+src/components/     # FeedCard + hero cards · PersonDrawer · TourButton · Sparkline · company tabs
+src/lib/            # graph · metrics · narrative · anomaly · classifier · yahoo · company assembler
+src/data/           # companies · financials · announcements · concalls · network · quotes (generated)
+scripts/            # build-time generators (EOD bars, re-dating) — Python pipeline is build-time only
+ai_logs/            # curated AI build history (submission deliverable)
+```

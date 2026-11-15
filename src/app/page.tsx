@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { FeedResponse } from "@/types";
 import FeedCard from "@/components/FeedCard";
+import TourButton from "@/components/TourButton";
 
 const WINDOWS = [
   { h: 24, label: "24h" },
@@ -66,6 +67,8 @@ export default function FeedPage() {
           ◎ Research any ticker
         </Link>
       </header>
+
+      <TourButton />
 
       {/* Anomaly strip */}
       {feed && feed.anomalies.length > 0 && (
