@@ -51,6 +51,17 @@ Two compute worlds, on purpose:
   where reasoning is required. Stateless request/response — the in-memory graph rebuilds
   from JSON on cold start (35 people ≈ milliseconds).
 
+**Data honesty (read this before the tables below).** The demo universe is shipped as
+**synthetic, provenance-tagged fixtures**: magnitudes are scaled from publicly known
+company financials, annual rows reconcile exactly with quarterly sums, filings mirror
+real exchange-announcement structure, and the 35-person network is plainly labelled
+synthetic (as the brief permits: *"realistic synthetic profiles — say clearly which you
+used"*). They stand in for what the build-time pipelines would scrape at scale
+(Screener.in quarterly tables, NSE/BSE filings, concall transcripts, public profiles).
+Unknown tickers served by the generalizer use **real live market data** from Yahoo
+Finance — so the "works on any ticker" claim is demonstrated with real data, not
+hard-coded answers.
+
 ---
 
 ## 2. Data Pipelines
